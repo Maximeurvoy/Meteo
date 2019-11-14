@@ -1,0 +1,19 @@
+.imageVent{
+    width: 150px;
+    margin-right: 93px;;
+  }
+
+  .flexRow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+  }
+
+  .menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   list-style-type: none;
+    
+  }
