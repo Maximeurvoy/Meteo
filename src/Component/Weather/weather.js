@@ -17,7 +17,8 @@ class Weather extends React.Component{
     wind:'Houhouu, Wooov, Vouh, Wouuuh',
     windDirection:0
   }
-  this.APIKey ='2c89daddf53c8549f9623b9b78cfb1b3'
+  // this.APIKey ='2c89daddf53c8549f9623b9b78cfb1b3' temporairement bloqué
+  this.APIKey ='17706518769a23ef96bfa77bd136ac55'
   }
 
   addAxios=()=>{
@@ -37,11 +38,8 @@ class Weather extends React.Component{
     })
   }
 
-componentDidUpdate=()=>{
-if (this.state.lat !==  this.props.lat|| this.state.lon !==  this.props.lon){
-  this.addAxios()
-}
-}
+
+
 
 componentDidMount=()=>{
   // navigator.geolocation.getCurrentPosition((pos)=>{

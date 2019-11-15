@@ -1,48 +1,65 @@
 import React, {Fragment, useState, useEffect} from 'react';
-import Weather from '../Weather/weather';
+// import Weather from '../Weather/weather';
+import WeatherByName from '../WeatherByName/WeatherByName';
+import axios from 'axios';
 
 let CityChoose=()=>{
     
-     const [lat,setLat]= useState(2.3)
-     const [lon, setLon] = useState (48)
-     const [inputLat, setInputLat] =useState(0)
-     const [inputLon, setInputLon] =useState(0)
+  const [name, setName] = useState('Nantes')
+  const [inputName,setInputName] = useState('')
+  let[temp,setTemp]= useState('result.data.main.temp')
+
+  const APIKey ='17706518769a23ef96bfa77bd136ac55'
 
   
-     // lat:48.866667
-  // lon:2.333333,
+useEffect(()=>{
+  
+    axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${name}&units=metric&&APPID=${APIKey}`)
+    .then((result)=>{
+      console.log(result)
+      
+        setTemp (result.data.main.temp)
+        // humidity:result.data.main.humidity,
+        // name:result.data.name,
+        // icon:result.data.weather[0].icon,
+        // iconDescription:result.data.weather[0].description,
+        // wind:result.data.wind.speed,
+        // windDirection:result.data.wind.deg,
+        // date:result.data.date
+      
+    })
+  })
 
-  let handleChangeLat=(event)=>{
-    setInputLat(event.target.value);
+
+
+  let newCityWeatherByName=()=>{
+    setName(inputName)
+    console.log(name)
   }
 
-  let handleChangeLon=(event)=>{
-    setInputLon(event.target.value);
+  let handleChangeCityName=(event)=>{
+    setInputName(event.target.value);
+    
+    
   }
+   
 
+  return(
+    <>
+      <input type='text' id='name' name='cityName' value={inputName} onChange={handleChangeCityName}></input>
+      <button onClick ={newCityWeatherByName}>New city by name</button>
+      <h2>{name}</h2>
+        <p>{`${temp}°C`}</p>
+        {/* <p>Humidity {this.state.humidity} %</p>
+        <img src={`https://openweathermap.org/img/wn/${this.state.icon}@2x.png`} alt={this.state.iconDescription}/>
+        <p>wind Speed {this.state.wind*3.6} km/h</p>
+        <div className="imageVent">
+          <img src={`${process.env.PUBLIC_URL} /north.png`} style={{width:`90px`,height:'90px',position:'absolute'} }alt="wind arrow"/>
+          <img src={`${process.env.PUBLIC_URL} /windDirection.png`} style={{transform:`rotate(${this.state.windDirection}deg)`,width:`90px`,height:'90px',position:'absolute'} }alt="wind arrow"/>
+        </div> */} */}
+      {/* {/* <WeatherByName name={name}/> */}
+    </>
+  )
+}
 
-
-  let newCityWeather=()=>{
-    setLat(inputLat)
-    setLon(inputLon)
-
-    console.log('toto')
-    console.log(lat)
-    console.log(lon)
-  }
-
-    return(
-      <>
-        <label for='longitude'>Longitude</label>
-        <input type='text' id='longitude' name='longitude' value={inputLon} onChange={handleChangeLon}></input>
-        <label for='latitude'>latitude</label>
-        <input type='text' id='latitude' name='latitude' value={inputLat} onChange={handleChangeLat}></input>
-        <p>la lat {lat}</p>
-        <p>la lon {lon}</p>
-        <button onClick ={newCityWeather}>New city</button>
-        <Weather lat={lat} lon={lon}/>
-      </>
-    )
-  }
-
-// export default CityChoose;
+export default CityChoose;

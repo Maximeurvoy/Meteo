@@ -17,7 +17,7 @@ class Router extends React.Component{
         <Route exact path="/" component={HomePage}/>
         <Route path="/damgan" component={Damgan}/>
         <Route path="/nantes" component={Nantes}/>
-        {/* <Route path="/cityChoose" component={CityChoose}/> */}
+        <Route path="/cityChoose" component={CityChoose}/>
         <Route path='/fiveDay' component={FiveDay}/>
       </Switch>
     )
