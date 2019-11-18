@@ -1,6 +1,7 @@
 import React, {Fragment} from 'react';
 import axios from 'axios';
 import { tsNamespaceExportDeclaration } from '@babel/types';
+import './FiveDay.css';
 
 class FiveDay extends React.Component{
   constructor(props){
@@ -43,12 +44,12 @@ class FiveDay extends React.Component{
       console.log(item.dt_txt)
       let day = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
       return(
-        <div>
-          <p>{day[(new Date (item.dt_txt)).getDay()]}</p>
-          <p>{item.main.temp}°C </p>
+        <div className='fiveDayTest'>
+          <p className='day'>{day[(new Date (item.dt_txt)).getDay()]}</p>
+          <p className='temperature'>{item.main.temp}°C </p>
           {/* <p>{item.weather[0].main} </p> */}
           {/* <p>{item.weather[0].description} </p> */}
-          <img src={`https://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`} alt={item.weather[0].description}/>
+          <img className='icon' src={`https://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`} alt={item.weather[0].description}/>
         </div>
       )
       })
@@ -57,11 +58,12 @@ class FiveDay extends React.Component{
  
   render(){
     return(
-        <Fragment>
-          <h2>{this.state.name}</h2>
-          <div className="flexRow">{this.futurWeather()}</div>
-          
-        </Fragment>
+        <div >
+          <div >
+          {/* <h2>{this.state.name}</h2> */}
+          <div className="flexRow  ">{this.futurWeather()}</div>
+          </div>
+        </div>
     )
   }
 }

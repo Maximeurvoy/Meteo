@@ -1,0 +1,19 @@
+.fiveday{
+  display: flex;
+  flex-direction: column;
+}
+
+.testdisplay{
+  display: flex;
+}
+p{
+  display: block;
+}
+.fiveDayTest{
+  /* border: solid blue 2px; */
+  width: 20%;
+  background-color:#0A161B ;
+  margin: 10px;
+  border-radius: 8px;
+  font-size: 1.5;
+}

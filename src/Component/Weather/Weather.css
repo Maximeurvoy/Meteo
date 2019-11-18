@@ -1,4 +1,51 @@
 .imageVent{
-  width: 150px;
-  margin-right: 93px;;
+  display:flex;
+  justify-content: space-around;
+  text-align: end;
+}
+
+.temperature{
+  color:#542C22;
+  font-size: 2.4em;
+  margin: 0;
+
+}
+.humidity{
+  color:#3278A4;
+  font-size: 1.8em;
+  margin: 0;
+}
+.iconOfTheDay{
+  width:200px;
+}
+.date{
+  color: green;
+}
+.weatherInformation{
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  
+}
+.weatherInformationIcon{
+  display: flex;
+  flex-direction: column;
+  font-size: 2em;
+  margin: 0;
+}
+.weatherInformationNumber{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 2em;
+  margin: 0;
+}
+.time{
+  font-size: 3em;
+}
+.wind{
+  margin: 0;
+}
+.cityName{
+  font-size: 3.4em;
 }

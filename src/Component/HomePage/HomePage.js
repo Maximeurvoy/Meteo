@@ -8,7 +8,7 @@ class HomePage extends React.Component{
 
   render(){
     return(
-      <div>Welcome HomePage</div>
+      <div>Welcome to my météo app. the default parameter was for the city of Nantes and Damgan because it's personnal but you can choose any city around the world to below the link citychoose. enjoy itHomePage</div>
 
   )
 }

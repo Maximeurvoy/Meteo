@@ -14,11 +14,10 @@ class Router extends React.Component{
   render(){
     return(
       <Switch>
-        <Route exact path="/" component={HomePage}/>
+        {/* <Route exact path="/" component={HomePage}/> */}
         <Route path="/damgan" component={Damgan}/>
-        <Route path="/nantes" component={Nantes}/>
+        <Route exact path="/" component={Nantes}/>
         <Route path="/cityChoose" component={CityChoose}/>
-        <Route path='/fiveDay' component={FiveDay}/>
       </Switch>
     )
     }

@@ -5,15 +5,41 @@
 
   .flexRow{
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
     justify-content: space-around;
-    
+    /* border: solid yellow 2px; */
+    /* width: 50%; */
+    align-content: space-around;
   }
 
   .menu{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-   list-style-type: none;
+    justify-content: space-around;
+    list-style-type: none;
     
   }
+  .nantes{
+    display: flex;
+    justify-content: center;
+  }
+  .fiveday{
+    display: flex;
+    flex-direction: column;
+    /* border: solid green 2px; */
+    
+  }
+
+.backgroundDay{
+  /* border: solid red 2px; */
+  width: 30%;
+  height: 40vw;
+  background-color:#3278A4;
+  border-radius: 15px;
+  margin: 15px;
+}
+.backgroundFiveDay{
+  /* border: solid green 2px; */
+  width: 50%;
+
+}
