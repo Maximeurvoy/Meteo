@@ -1,45 +1,26 @@
-.imageVent{
-    width: 150px;
-    margin-right: 93px;;
-  }
-
-  .flexRow{
-    display: flex;
-    /* flex-direction: row; */
-    justify-content: space-around;
-    /* border: solid yellow 2px; */
-    /* width: 50%; */
-    align-content: space-around;
-  }
-
-  .menu{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    list-style-type: none;
-    
-  }
-  .nantes{
-    display: flex;
-    justify-content: center;
-  }
-  .fiveday{
-    display: flex;
-    flex-direction: column;
-    /* border: solid green 2px; */
-    
-  }
-
-.backgroundDay{
-  /* border: solid red 2px; */
-  width: 30%;
-  height: 40vw;
-  background-color:#3278A4;
-  border-radius: 15px;
-  margin: 15px;
+.weather{
+  width: 90vw;
+  height: 80vh;
+  margin: auto;
 }
-.backgroundFiveDay{
-  /* border: solid green 2px; */
-  width: 50%;
+.nantes{
+  display: flex;
+  justify-content: center;
+  margin:auto;
+  margin-top: 5%;
+  width: 80vw;
+}
 
+.flexRow{
+  display: flex;
+  height: 50vh;
+}
+h1{
+  font-size: 4em;
+  background-color: #3278A4;
+  border-radius: 10px;
+  width: 40%;
+  margin: auto;
+  margin-top: 5%;
+  background-size: contain;
 }

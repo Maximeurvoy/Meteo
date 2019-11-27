@@ -1,35 +1,23 @@
-/* .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color:black;
-
-}
-
-.App-link {
-  color: #09d3ac;
-} */
-/* @import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap'); */
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web&display=swap');
 
 body{
   color:#EAF0E9;
   background: radial-gradient(#174463, #020B13); 
-  display: flex;
-  /* justify-content: space-between; */
-  flex-direction: column;
   text-align: center;
-  /* font-family: 'Bebas Neue', cursive; */
-  border: solid black 2px;
+  /* border: solid black 2px; */
   font-family: 'Titillium Web', sans-serif;
-  
+  /* height: 90vh;
+  width: 100vw; */
 
 }
+.root{
+  /* height: 100%; */
+}
 .app{
-  width: 100vw;
+  /* width: 100vw;
+  height:100vh */
+}
+
+.App-header{
+  height: 15%;
 }

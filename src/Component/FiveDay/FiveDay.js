@@ -46,10 +46,12 @@ class FiveDay extends React.Component{
       return(
         <div className='fiveDayTest'>
           <p className='day'>{day[(new Date (item.dt_txt)).getDay()]}</p>
-          <p className='temperature'>{item.main.temp}°C </p>
+          <p className='temperatureFutur'>{item.main.temp}°C </p>
           {/* <p>{item.weather[0].main} </p> */}
           {/* <p>{item.weather[0].description} </p> */}
           <img className='icon' src={`https://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`} alt={item.weather[0].description}/>
+          <p className='humidity'>Hum {item.main.humidity} %</p>
+          <p className='wind'>Wind<br/>{Math.round((item.wind.speed*3.6)*100)/100}<br/>km/h</p>
         </div>
       )
       })
@@ -57,13 +59,9 @@ class FiveDay extends React.Component{
     
  
   render(){
-    return(
-        <div >
-          <div >
-          {/* <h2>{this.state.name}</h2> */}
-          <div className="flexRow  ">{this.futurWeather()}</div>
-          </div>
-        </div>
+    return(      
+        <div className="flexRow  ">{this.futurWeather()}</div>
+      
     )
   }
 }

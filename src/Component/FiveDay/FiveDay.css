@@ -9,11 +9,32 @@
 p{
   display: block;
 }
+
+.flexrow{
+  display: flex;
+  width: 60%;
+  margin: auto;
+
+}
 .fiveDayTest{
-  /* border: solid blue 2px; */
   width: 20%;
   background-color:#0A161B ;
-  margin: 10px;
   border-radius: 8px;
   font-size: 1.5;
+  margin: 2%;
+  padding: 10% 2% 10% 2%;
+}
+.icon{
+  width: 100%;
+  max-width: 60px;
+  margin: auto;
+}
+.temperatureFutur{
+  color:#542C22;
+  font-size: 1.4em;
+  margin: 0;
+
+}
+.day{
+  font-size: 1em;
 }

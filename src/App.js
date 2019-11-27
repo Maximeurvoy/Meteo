@@ -9,12 +9,10 @@ import Router from './Component/Router/Router';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
         <NavBar/>
         <Router/>
         {/* <HomePage/>
         <Weather/> */}
-      </header>
     </div>
   );
 }

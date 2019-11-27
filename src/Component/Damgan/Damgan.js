@@ -9,7 +9,7 @@ class Damgan extends React.Component{
   }
   render(){
     return(
-<div className='nantes'>
+      <div className='nantes'>
         <div className='backgroundDay'>
         <Weather lat="47.5167" lon="-2.5833"/>
         </div>

@@ -12,13 +12,12 @@ class Nantes extends React.Component{
 
   render(){
     return(
+      <div className='weather'>
+        <h1>Nantes</h1>
       <div className='nantes'>
-        <div className='backgroundDay'>
-        <Weather  lat="47.2173" lon="-1.5534"/>
-        </div>
-        <div className='backgroundFiveDay'>
-        <FiveDay className='fiveday' lat="47.2173" lon="-1.5534"/>
-        </div>
+        <Weather lat="47.2173" lon="-1.5534"/>
+        <FiveDay lat="47.2173" lon="-1.5534"/>
+      </div>
       </div>
     )
   } 
