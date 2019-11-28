@@ -9,18 +9,13 @@ class Damgan extends React.Component{
   }
   render(){
     return(
-      <div className='nantes'>
-        <div className='backgroundDay'>
-        <Weather lat="47.5167" lon="-2.5833"/>
-        </div>
-        <div className='backgroundFiveDay'>
-        <FiveDay className='fiveday' lat="47.5167" lon="-2.5833"/>
+      <div className='weather'>
+        <h1>Damgan</h1>
+        <div className='nantes'>
+          <Weather lat="47.5167" lon="-2.5833"/>
+          <FiveDay lat="47.5167" lon="-2.5833"/>
         </div>
       </div>
-
-
-
-      
     )
   }
 }

@@ -2,6 +2,7 @@ import React, {Fragment, useState, useEffect} from 'react';
 // import Weather from '../Weather/weather';
 import WeatherByName from '../WeatherByName/WeatherByName';
 import axios from 'axios';
+import './CityChoose.css'
 
 let CityChoose=()=>{
     
@@ -44,23 +45,19 @@ useEffect(()=>{
   }
 
   return(
-    <>
-      <input type='text' id='name' name='cityName' value={inputName} onChange={handleChangeCityName}></input>
-      <button onClick ={newCityWeatherByName}>New city by name</button>
-      <h2>{name}</h2>
-        <p>{`${temp}°C`}</p>
-        <p>Humidity {humidity} %</p>
-        <img src={`https://openweathermap.org/img/wn/${icon}@2x.png`} alt={iconDescription}/>
-        <p>wind Speed {wind*3.6} km/h</p>
-        {/* <p>Humidity {humidity} %</p>
-        <img src={`https://openweathermap.org/img/wn/${this.state.icon}@2x.png`} alt={this.state.iconDescription}/>
-        <p>wind Speed {this.state.wind*3.6} km/h</p>
-        <div className="imageVent">
-          <img src={`${process.env.PUBLIC_URL} /north.png`} style={{width:`90px`,height:'90px',position:'absolute'} }alt="wind arrow"/>
-          <img src={`${process.env.PUBLIC_URL} /windDirection.png`} style={{transform:`rotate(${this.state.windDirection}deg)`,width:`90px`,height:'90px',position:'absolute'} }alt="wind arrow"/>
-        </div> */}
-      {/* {/* <WeatherByName name={name}/> */}
-    </>
+    <div className='presentation'>
+      <div className='title'>
+        <input type='text' id='name' name='cityName' value={inputName} onChange={handleChangeCityName}></input><br/>
+        <button onClick ={newCityWeatherByName}>New city by name</button>
+        <h2>{name}</h2>
+      </div>
+      <div className='weatherChoose'>
+        <p className='temperature'>{`${temp}°C`}</p>
+        <p className='humidity'>Humidity {humidity} %</p>
+        <img className='iconOfTheDay' src={`https://openweathermap.org/img/wn/${icon}@2x.png`} alt={iconDescription}/>
+        <p>wind<br/>{Math.round((wind*3.6)*100)/100} km/h</p>
+      </div>
+    </div>
   )
 }
 

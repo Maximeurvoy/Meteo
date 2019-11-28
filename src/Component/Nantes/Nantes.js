@@ -14,10 +14,10 @@ class Nantes extends React.Component{
     return(
       <div className='weather'>
         <h1>Nantes</h1>
-      <div className='nantes'>
-        <Weather lat="47.2173" lon="-1.5534"/>
-        <FiveDay lat="47.2173" lon="-1.5534"/>
-      </div>
+        <div className='nantes'>
+          <Weather lat="47.2173" lon="-1.5534"/>
+          <FiveDay lat="47.2173" lon="-1.5534"/>
+        </div>
       </div>
     )
   } 

@@ -1,0 +1,53 @@
+.presentation{
+  display: flex;
+  margin-top: 15%;
+}
+.title{
+  font-size: 4em;
+  background-color: #3278A4;
+  border-radius: 10px;
+  width: 40%;
+  margin: auto;
+  background-size: contain;
+  min-height: 40vh;
+}
+.weatherChoose{
+  width: 40%;
+  background-color:#3278A4;
+  border-radius: 15px;
+  margin:auto;
+  min-height: 40vh;
+}
+
+.temperature{
+  color:#542C22;
+  font-size: 2em;
+  margin: 0;
+
+}
+.humidity{
+  color:#153E5C;
+  font-size: 1.8em;
+  margin: 0;
+}
+.iconOfTheDay{
+  width:200px;
+}
+.weatherInformationNumber{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1em 1em 1em 1em;
+
+}
+h2{
+  margin: 0;
+}
+button{
+  background-color: #153E5C;
+  border: none;
+  width: 5em;
+  font-size: 0.5em;
+  border-radius: 15px;
+  box-shadow: #3278A4 10px;
+}
